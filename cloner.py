@@ -4,13 +4,13 @@ import sys
 import shutil
 
 # Create the parser
-my_parser = argparse.ArgumentParser(prog='duplicator',
+my_parser = argparse.ArgumentParser(prog='cloner.py',
 usage='%(prog)s source destination', description='clone a code base from one directory into another')
 
 # Add arguments and configure the parser to have a more user-friendly interface
 my_parser.add_argument('v1',
 metavar= 'source', help='the path of the source directory', action='store')
-my_parser.add_argument('v2', metavar='destination', help='the path of the new destination directory',action='store', default='dst')
+my_parser.add_argument('v2', metavar='destination', help='the path of the new destination directory',action='store', nargs='?', default='v2')
 
 
 # Register the arguments passed via the CLI into the program itself
@@ -27,7 +27,7 @@ if not os.path.isdir(input_path):
 
 # Else, perform the actual cloning and exit the program
 shutil.copytree(input_path, output_path)
-print('Done Cloning!!')
+print('I am done cloning ', input_path, "into",  output_path)
 sys.exit(0)
 
 
