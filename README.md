@@ -1,5 +1,5 @@
 # Project-Cloner
-A python script that helps developers at Kippa create new versions of any codebase automatically
+A small Python script that helps developers at Kippa create new versions of any codebase automatically
 
 ## Usage
 
